@@ -7,18 +7,27 @@ mod style;
 
 use std::collections::HashMap;
 
-use style::StyleContext;
-
-use crate::event::Event;
 use crate::event::EventContext;
+use crate::style::StyleContext;
 
 fn main() -> anyhow::Result<()> {
     let file_bottom = "example.en.ass";
+    let file_top = "example.zh-TW.ass";
 
+    do_main(file_bottom)?;
+    println!();
+    println!("------------------------------------------------------");
+    println!();
+    do_main(file_top)?;
+
+    Ok(())
+}
+
+fn do_main(filename: &str) -> anyhow::Result<()> {
     let mut map: HashMap<Option<String>, Vec<String>> = HashMap::new();
     let mut section: Option<String> = None;
 
-    for line in std::fs::read_to_string(file_bottom)?.lines() {
+    for line in std::fs::read_to_string(filename)?.lines() {
         if line.starts_with('[') && line.ends_with(']') {
             section = Some(line[1..line.len() - 1].to_string());
             continue;
