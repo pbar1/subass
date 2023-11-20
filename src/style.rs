@@ -130,7 +130,7 @@ impl StyleContext {
                     style
                         .unknown_fields
                         .get(x)
-                        .context("unknown fields did not contain field: {field}")?
+                        .context(format!("unknown fields did not contain field: {x}"))?
                 ),
                 StyleField::Name => format!("{}", style.name),
                 StyleField::Fontname => format!("{}", style.fontname),
@@ -230,9 +230,9 @@ impl TryFrom<Style> for StyleStrict {
         Ok(Self {
             unknown_fields: value.unknown_fields,
             style_type: value.style_type,
-            name: value.name.context("name not found")?,
-            fontname: value.fontname.context("fontname not found")?,
-            fontsize: value.fontsize.context("fontsize not found")?,
+            name: value.name.context("Name not found")?,
+            fontname: value.fontname.context("Fontname not found")?,
+            fontsize: value.fontsize.context("Fontsize not found")?,
             primary_color: value.primary_color.context("PrimaryColor not found")?,
             secondary_color: value.secondary_color.context("SecondaryColor not found")?,
             outline_color: value.outline_color.context("OutlineColor not found")?,
@@ -329,11 +329,11 @@ mod tests {
     }
 
     #[rstest]
-    #[case(
+    #[case::english(
         DEFAULT_STYLE_FORMAT,
         r"Style: Default,Roboto Medium,26,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.3,0,2,20,20,23,0",
     )]
-    #[case(
+    #[case::chinese(
         DEFAULT_STYLE_FORMAT,
         r"Style: zhu2,方正准圆_GBK,33,&H02FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,0.1,2,10,10,10,1",
     )]

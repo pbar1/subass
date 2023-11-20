@@ -9,6 +9,7 @@ use std::collections::HashMap;
 
 use style::StyleContext;
 
+use crate::event::Event;
 use crate::event::EventContext;
 
 fn main() -> anyhow::Result<()> {
@@ -28,31 +29,50 @@ fn main() -> anyhow::Result<()> {
             .or_insert_with(|| vec![line.to_string()]);
     }
 
+    dbg!(map.keys());
+
     let key = Some("V4+ Styles".to_string());
-    if map.contains_key(&key) {
-        let format_line = map.get(&key).unwrap().get(0).unwrap();
-        let style_line = map.get(&key).unwrap().get(1).unwrap();
+    if let Some(lines) = map.get(&key) {
+        let mut context: Option<StyleContext> = None;
+        for line in lines {
+            if line.starts_with(';') || line == "" {
+                continue;
+            }
 
-        let style_context = StyleContext::from_format_line(format_line)?;
-        dbg!(&style_context);
+            if context.is_none() {
+                context = Some(StyleContext::from_format_line(line)?);
+                continue;
+            }
 
-        let style = style_context.style_strict_from_line(style_line)?;
-        dbg!(&style);
-
-        let style_line_2 = style_context.line_from_style_strict(&style)?;
-        dbg!(&style_line_2);
+            if let Some(ref context) = context {
+                let style = context.style_strict_from_line(line)?;
+                let line2 = context.line_from_style_strict(&style)?;
+                dbg!(&line2);
+                assert_eq!(&line2, line);
+            }
+        }
     }
 
     let key = Some("Events".to_string());
-    if map.contains_key(&key) {
-        let format_line = map.get(&key).unwrap().get(0).unwrap();
-        let event_line = map.get(&key).unwrap().get(1).unwrap();
+    if let Some(lines) = map.get(&key) {
+        let mut context: Option<EventContext> = None;
+        for line in lines {
+            if line.starts_with(';') || line == "" {
+                continue;
+            }
 
-        let event_context = EventContext::from_format_line(format_line)?;
-        dbg!(&event_context);
+            if context.is_none() {
+                context = Some(EventContext::from_format_line(line)?);
+                continue;
+            }
 
-        let event = event_context.event_strict_from_line(event_line)?;
-        dbg!(&event);
+            if let Some(ref context) = context {
+                let event = context.event_strict_from_line(line)?;
+                let line2 = context.line_from_event_strict(&event)?;
+                dbg!(&line2);
+                assert_eq!(&line2, line);
+            }
+        }
     }
 
     Ok(())

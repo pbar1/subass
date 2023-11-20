@@ -89,6 +89,37 @@ impl EventContext {
         let intermediate = self.event_from_line(line)?;
         EventStrict::try_from(intermediate)
     }
+
+    pub fn line_from_event_strict(&self, event: &EventStrict) -> anyhow::Result<String> {
+        let mut line = format!("{}: ", event.event_type);
+
+        for field_type in &self.format {
+            let s = match field_type {
+                EventField::Unknown(x) => format!(
+                    "{}",
+                    event
+                        .unknown_fields
+                        .get(x)
+                        .context(format!("unknown fields did not contain field: {x}"))?
+                ),
+                EventField::Layer => format!("{}", event.layer),
+                EventField::Start => format!("{}", event.start),
+                EventField::End => format!("{}", event.end),
+                EventField::Style => format!("{}", event.style),
+                EventField::Name => format!("{}", event.name),
+                EventField::MarginL => format!("{}", event.margin_l),
+                EventField::MarginR => format!("{}", event.margin_r),
+                EventField::MarginV => format!("{}", event.margin_v),
+                EventField::Effect => format!("{}", event.effect),
+                EventField::Text => format!("{}", event.text),
+            };
+            line.push_str(&s);
+            line.push(',');
+        }
+        line.pop(); // remove trailing comma that we know we just added
+
+        Ok(line)
+    }
 }
 
 #[derive(Default, Debug, Clone, PartialEq)]
@@ -166,6 +197,9 @@ mod tests {
 
     use super::*;
 
+    const DEFAULT_EVENT_FORMAT: &str =
+        r"Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text";
+
     #[rstest]
     #[case("Name", EventField::Name)]
     #[case("MarginV", EventField::MarginV)]
@@ -182,5 +216,29 @@ mod tests {
     fn test_style_field_to_string(#[case] got: EventField, #[case] should: &str) {
         let result = got.to_string();
         assert_eq!(result, should);
+    }
+
+    #[rstest]
+    #[case::english(
+        DEFAULT_EVENT_FORMAT,
+        r"Dialogue: 0,0:00:00.00,0:00:05.00,OS,,0,0,0,,{\i1}This program contains graphic content, adult themes and violence that may not be suitable for some viewers and is inappropriate for children.\N This content is entirely fictional.  The content is intended for mature audiences only.{\i0}",
+    )]
+    #[case::chinese(
+        DEFAULT_EVENT_FORMAT,
+        r"Dialogue: 0,0:00:01.00,0:00:09.00,zhu,,0,0,0,,{\fad(500,500)}本字幕由豌豆字幕組製作 僅供學習交流 禁止用於商業用途",
+    )]
+    #[case::no_text(
+        DEFAULT_EVENT_FORMAT,
+        r"Dialogue: 0,0:24:00.43,0:24:02.42,Default,,0,0,0,,"
+    )]
+    #[case::comment(
+        DEFAULT_EVENT_FORMAT,
+        r"Comment: 0,0:04:12.94,0:04:12.98,op-en,,0,0,0,,==========OP=========="
+    )]
+    fn test_style_lossless(#[case] format: &str, #[case] line_before: &str) {
+        let context = EventContext::from_format_line(format).unwrap();
+        let parsed = context.event_strict_from_line(line_before).unwrap();
+        let line_after = context.line_from_event_strict(&parsed).unwrap();
+        assert_eq!(line_after, line_before)
     }
 }
