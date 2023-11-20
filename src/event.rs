@@ -3,6 +3,12 @@ use std::str::FromStr;
 
 use anyhow::Context;
 
+#[derive(Default, Debug, Clone)]
+pub struct Events {
+    pub context: EventContext,
+    pub entries: Vec<EventStrict>,
+}
+
 /// Known fields in the [Events] section
 #[derive(Debug, Clone, PartialEq, strum::Display, strum::EnumString)]
 #[strum(serialize_all = "PascalCase")]
@@ -24,6 +30,25 @@ pub enum EventField {
 #[derive(Debug, Clone)]
 pub struct EventContext {
     format: Vec<EventField>,
+}
+
+impl Default for EventContext {
+    fn default() -> Self {
+        Self {
+            format: vec![
+                EventField::Layer,
+                EventField::Start,
+                EventField::End,
+                EventField::Style,
+                EventField::Name,
+                EventField::MarginL,
+                EventField::MarginR,
+                EventField::MarginV,
+                EventField::Effect,
+                EventField::Text,
+            ],
+        }
+    }
 }
 
 impl EventContext {

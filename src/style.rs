@@ -5,6 +5,12 @@ use anyhow::Context;
 
 use crate::common::Boolean;
 
+#[derive(Default, Debug, Clone)]
+pub struct Styles {
+    pub context: StyleContext,
+    pub entries: Vec<StyleStrict>,
+}
+
 /// Known fields in the [V4+ Styles] section
 #[derive(Debug, Clone, PartialEq, strum::Display, strum::EnumString)]
 #[strum(serialize_all = "PascalCase")]
@@ -39,6 +45,38 @@ pub enum StyleField {
 #[derive(Debug, Clone)]
 pub struct StyleContext {
     format: Vec<StyleField>,
+}
+
+impl Default for StyleContext {
+    fn default() -> Self {
+        Self {
+            format: vec![
+                StyleField::Name,
+                StyleField::Fontname,
+                StyleField::Fontsize,
+                StyleField::PrimaryColour,
+                StyleField::SecondaryColour,
+                StyleField::OutlineColour,
+                StyleField::BackColour,
+                StyleField::Bold,
+                StyleField::Italic,
+                StyleField::Underline,
+                StyleField::StrikeOut,
+                StyleField::ScaleX,
+                StyleField::ScaleY,
+                StyleField::Spacing,
+                StyleField::Angle,
+                StyleField::BorderStyle,
+                StyleField::Outline,
+                StyleField::Shadow,
+                StyleField::Alignment,
+                StyleField::MarginL,
+                StyleField::MarginR,
+                StyleField::MarginV,
+                StyleField::Encoding,
+            ],
+        }
+    }
 }
 
 impl StyleContext {

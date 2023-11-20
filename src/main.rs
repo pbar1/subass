@@ -7,82 +7,91 @@ mod style;
 
 use std::collections::HashMap;
 
+use event::Events;
+use style::Styles;
+
 use crate::event::EventContext;
 use crate::style::StyleContext;
 
-fn main() -> anyhow::Result<()> {
-    let file_bottom = "example.en.ass";
-    let file_top = "example.zh-TW.ass";
-
-    do_main(file_bottom)?;
-    println!();
-    println!("------------------------------------------------------");
-    println!();
-    do_main(file_top)?;
-
-    Ok(())
+#[derive(Default, Debug, Clone)]
+pub struct AssScript {
+    pub other_sections: HashMap<String, Vec<String>>,
+    pub styles: Styles,
+    pub events: Events,
 }
 
-fn do_main(filename: &str) -> anyhow::Result<()> {
-    let mut map: HashMap<Option<String>, Vec<String>> = HashMap::new();
-    let mut section: Option<String> = None;
+impl AssScript {
+    fn try_from_file(filename: &str) -> anyhow::Result<Self> {
+        let mut script = AssScript::default();
 
-    for line in std::fs::read_to_string(filename)?.lines() {
-        if line.starts_with('[') && line.ends_with(']') {
-            section = Some(line[1..line.len() - 1].to_string());
-            continue;
+        // initial state is before a section
+        let mut section = "";
+
+        let mut set_style_format = false;
+        let mut set_event_format = false;
+
+        for line in std::fs::read_to_string(filename)?.lines() {
+            // ensure line doesn't have leading or trailing space
+            let line = line.trim();
+
+            // TODO: Collect comments in this struct as well
+            // skip comments and newlines
+            if line.starts_with(';') || line.is_empty() {
+                continue;
+            }
+
+            // parse the sections
+            if line.starts_with('[') && line.ends_with(']') {
+                section = &line[1..line.len() - 1];
+                continue;
+            }
+
+            match section {
+                "V4+ Styles" => {
+                    // first line must be format
+                    if !set_style_format {
+                        script.styles.context = StyleContext::from_format_line(line)?;
+                        set_style_format = true;
+                        continue;
+                    }
+
+                    let parsed = script.styles.context.style_strict_from_line(line)?;
+                    script.styles.entries.push(parsed);
+                }
+                "Events" => {
+                    // first line must be format
+                    if !set_event_format {
+                        script.events.context = EventContext::from_format_line(line)?;
+                        set_event_format = true;
+                        continue;
+                    }
+
+                    let parsed = script.events.context.event_strict_from_line(line)?;
+                    script.events.entries.push(parsed);
+                }
+                _ => {
+                    script
+                        .other_sections
+                        .entry(section.to_string())
+                        .and_modify(|list| list.push(line.to_string()))
+                        .or_insert_with(|| vec![line.to_string()]);
+                }
+            }
         }
 
-        map.entry(section.clone())
-            .and_modify(|e| e.push(line.to_string()))
-            .or_insert_with(|| vec![line.to_string()]);
+        Ok(script)
     }
+}
 
-    dbg!(map.keys());
+fn main() -> anyhow::Result<()> {
+    let file_bot = "example.en.ass";
+    let file_top = "example.zh-TW.ass";
 
-    let key = Some("V4+ Styles".to_string());
-    if let Some(lines) = map.get(&key) {
-        let mut context: Option<StyleContext> = None;
-        for line in lines {
-            if line.starts_with(';') || line == "" {
-                continue;
-            }
+    let script_bot = AssScript::try_from_file(file_bot)?;
+    dbg!(script_bot);
 
-            if context.is_none() {
-                context = Some(StyleContext::from_format_line(line)?);
-                continue;
-            }
-
-            if let Some(ref context) = context {
-                let style = context.style_strict_from_line(line)?;
-                let line2 = context.line_from_style_strict(&style)?;
-                dbg!(&line2);
-                assert_eq!(&line2, line);
-            }
-        }
-    }
-
-    let key = Some("Events".to_string());
-    if let Some(lines) = map.get(&key) {
-        let mut context: Option<EventContext> = None;
-        for line in lines {
-            if line.starts_with(';') || line == "" {
-                continue;
-            }
-
-            if context.is_none() {
-                context = Some(EventContext::from_format_line(line)?);
-                continue;
-            }
-
-            if let Some(ref context) = context {
-                let event = context.event_strict_from_line(line)?;
-                let line2 = context.line_from_event_strict(&event)?;
-                dbg!(&line2);
-                assert_eq!(&line2, line);
-            }
-        }
-    }
+    let script_top = AssScript::try_from_file(file_top)?;
+    dbg!(script_top);
 
     Ok(())
 }
