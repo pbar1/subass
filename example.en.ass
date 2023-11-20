@@ -1,0 +1,258 @@
+[Script Info]
+Title: English (US)
+Original Translation: 
+Original Editing: 
+Original Timing: 
+Synch Point: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Roboto Medium,26,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.3,0,2,20,20,23,0
+Style: OS,Arial,18,&H00FFFFFF,&H0000FFFF,&H00000000,&H7F404040,-1,0,0,0,100,100,0,0,1,2,1,8,1,1,15,0
+Style: Italics,Roboto Medium,26,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,-1,0,0,100,100,0,0,1,1.3,0,2,20,20,23,0
+Style: On Top,Roboto Medium,26,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.3,0,8,20,20,23,0
+Style: DefaultLow,Roboto Medium,26,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.3,0,2,20,20,23,0
+Style: Eyecatch1,Times New Roman,20,&H00E8F0E9,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,0,1,40,40,18,0
+Style: Eyecatch2,Times New Roman,20,&H00E8F0E9,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,0,3,40,40,18,0
+Style: Eyecatch1A,Times New Roman,20,&H00E8F0E9,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,0,7,40,20,18,0
+Style: Eyecatch2A,Times New Roman,20,&H00E8F0E9,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,0,9,20,40,13,0
+Style: WallEyecatch,Arial,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,5,10,10,15,1
+Style: WallEyecatchI,Arial,12,&H00000000,&H000000FF,&H00FFFFFF,&H00DBF8F4,-1,0,0,0,100,100,0,0,1,2,2,5,10,10,15,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:05.00,OS,,0,0,0,,{\i1}This program contains graphic content, adult themes and violence that may not be suitable for some viewers and is inappropriate for children.\N This content is entirely fictional.  The content is intended for mature audiences only.{\i0}
+Dialogue: 0,0:00:02.94,0:00:06.52,Default,,0,0,0,,Hey! You okay, Oliver?! Hang in th--!
+Dialogue: 0,0:00:18.99,0:00:23.66,Default,,0,0,0,,That's the last of the pursuers, Levi.
+Dialogue: 0,0:00:30.25,0:00:35.76,Default,,0,0,0,,Everyone got turned into Titans\Nand only you survived.
+Dialogue: 0,0:00:35.76,0:00:43.10,Default,,0,0,0,,Probably for the same reason you're not\Ndead yet: because you're an Ackermann.
+Dialogue: 0,0:00:57.11,0:01:00.62,Default,,0,0,0,,But what to do now?
+Dialogue: 0,0:01:00.62,0:01:08.04,Default,,0,0,0,,We can't stop Zeke anymore, so it's\Nup to Armin or Commander Pyxis.
+Dialogue: 0,0:01:08.04,0:01:12.05,Default,,0,0,0,,Even supposing that Eren\Ndoes betray Zeke,
+Dialogue: 0,0:01:12.05,0:01:16.05,Default,,0,0,0,,if the Jaegerists control\Nthe island with spinal fluid,
+Dialogue: 0,0:01:16.05,0:01:20.55,Default,,0,0,0,,we'll be fugitives\Nfor the rest of our lives.
+Dialogue: 0,0:01:22.18,0:01:29.48,Default,,0,0,0,,Looks like my turn has come...\NEven if I thought I did the right thing.
+Dialogue: 0,0:01:30.40,0:01:35.03,Default,,0,0,0,,Times change and you end up in a cell.
+Dialogue: 0,0:01:35.03,0:01:40.66,Default,,0,0,0,,What do you say we live out\Nhere forever? Huh, Levi?
+Dialogue: 0,0:01:45.41,0:01:49.79,Default,,0,0,0,,That was...! No way...! Eren's gonna...?!
+Dialogue: 0,0:01:49.79,0:01:51.25,Default,,0,0,0,,Levi!
+Dialogue: 0,0:01:52.46,0:01:56.80,Default,,0,0,0,,The Beast... Where'd that shithead go?
+Dialogue: 0,0:01:56.80,0:01:58.68,Default,,0,0,0,,Lie back down.
+Dialogue: 0,0:01:58.68,0:02:04.43,Default,,0,0,0,,It's been half a day since Zeke\Nand the Jaegerists left for Shiganshina.
+Dialogue: 0,0:02:04.43,0:02:07.35,Default,,0,0,0,,What happened?
+Dialogue: 0,0:02:07.35,0:02:15.86,Default,,0,0,0,,I botched it. He was fully prepared\Nto die... and I didn't see it.
+Dialogue: 0,0:02:15.86,0:02:18.57,Default,,0,0,0,,He got away again.
+Dialogue: 0,0:02:18.57,0:02:21.78,Default,,0,0,0,,That's unfortunate, but right now--
+Dialogue: 0,0:02:21.78,0:02:26.29,Default,,0,0,0,,If we run and hide, what will be left?
+Dialogue: 0,0:02:26.29,0:02:32.04,Default,,0,0,0,,Wha--? I guess you overheard\Nme talking to myself.
+Dialogue: 0,0:02:32.04,0:02:39.59,Default,,0,0,0,,What... are you building? You gonna\Npull me on that... with a horse?
+Dialogue: 0,0:02:39.59,0:02:44.39,Default,,0,0,0,,There's no way in hell you can\Nstay out of the action.
+Dialogue: 0,0:02:44.39,0:02:48.73,Default,,0,0,0,,Yeah, you're right. I can't.
+Dialogue: 0,0:02:50.60,0:02:55.11,Default,,0,0,0,,My goal... is to kill Zeke.
+Dialogue: 0,0:02:55.11,0:03:01.70,Default,,0,0,0,,Looks like our interests align,\NTheo Magath... Pieck Finger.
+Dialogue: 0,0:03:07.29,0:03:13.58,Default,,0,0,0,,Levi Ackermann. It seems you can\Nstand up to one of the Nine, but...
+Dialogue: 0,0:03:13.58,0:03:18.05,Default,,0,0,0,,How do you plan on\Ndodging a bullet like that?
+Dialogue: 0,0:03:18.05,0:03:24.76,Default,,0,0,0,,I can't dodge a bullet, but I've\Ncome before you in this sad state.
+Dialogue: 0,0:03:24.76,0:03:29.81,Default,,0,0,0,,Whether you shoot or listen is up to you.
+Dialogue: 0,0:03:34.65,0:03:42.07,Default,,0,0,0,,Then I'll ask this first: You say you'll\Nkill Zeke, but where is he now?
+Dialogue: 0,0:03:42.07,0:03:47.28,Default,,0,0,0,,Zeke's probably being held by Eren\Nto make use of his royal blood.
+Dialogue: 0,0:03:47.28,0:03:50.29,Default,,0,0,0,,No, by the Founding Titan.
+Dialogue: 0,0:03:50.29,0:03:56.63,Default,,0,0,0,,It seems the Titan expert Hange knows\Neverything--even more than Marley.
+Dialogue: 0,0:03:56.63,0:03:59.71,Default,,0,0,0,,Have you seen the Founding Titan?
+Dialogue: 0,0:03:59.71,0:04:06.43,Default,,0,0,0,,I know it's so humongous that it\Nseems like nothing can be done, so...
+Dialogue: 0,0:04:06.43,0:04:12.98,Default,,0,0,0,,We've got no other choice.\NWe've gotta put our powers together.
+Dialogue: 0,0:05:42.98,0:05:47.99,Default,,0,0,0,,"Pride"
+Dialogue: 0,0:06:25.65,0:06:32.78,Default,,0,0,0,,How exactly do I get my mom to\Neat Falco? Just do it by force?
+Dialogue: 0,0:06:32.78,0:06:37.71,Default,,0,0,0,,If he's hurt and finds out about\Nhis Titan powers, it's over.
+Dialogue: 0,0:06:37.71,0:06:44.09,Default,,0,0,0,,I can't afford to fail.\NI've gotta think of a better way.
+Dialogue: 0,0:06:45.84,0:06:48.76,Default,,0,0,0,,What an innocent kid.
+Dialogue: 0,0:06:48.76,0:06:56.64,Default,,0,0,0,,He hasn't whined once about camping\Nout here with every reason to doubt me.
+Dialogue: 0,0:06:56.64,0:07:01.65,Default,,0,0,0,,Does he seriously trust me?
+Dialogue: 0,0:07:01.65,0:07:08.36,Default,,0,0,0,,Dammit! Sasha...\NWould you have understood?
+Dialogue: 0,0:07:15.33,0:07:21.12,Default,,0,0,0,,Um, I thought we were going to\Na hospital, not a deserted village.
+Dialogue: 0,0:07:21.12,0:07:26.42,Default,,0,0,0,,Yeah. There's something\Ninteresting here I wanna show you.
+Dialogue: 0,0:07:28.63,0:07:31.09,Default,,0,0,0,,This... is Ragako Village!
+Dialogue: 0,0:07:31.09,0:07:32.47,Default,,0,0,0,,Eh?
+Dialogue: 0,0:07:33.43,0:07:36.68,Default,,0,0,0,,How do you... know that?
+Dialogue: 0,0:07:36.68,0:07:42.44,Default,,0,0,0,,Last night, I heard you\Ntalking to yourself.
+Dialogue: 0,0:07:42.44,0:07:49.23,Default,,0,0,0,,Sasha was your comrade shot by\NGabi on the airship, wasn't she?
+Dialogue: 0,0:07:49.23,0:07:56.28,Default,,0,0,0,,You brought me here knowing\Nwho I was but pretending not to.
+Dialogue: 0,0:07:56.28,0:08:01.37,Default,,0,0,0,,Why? To get revenge... on me?
+Dialogue: 0,0:08:01.37,0:08:07.25,Default,,0,0,0,,No. Stuff like that happens\Nin the heat of battle.
+Dialogue: 0,0:08:20.02,0:08:26.27,Default,,0,0,0,,Don't worry, it can't move.\NIt's been like this for years.
+Dialogue: 0,0:08:28.15,0:08:33.95,Default,,0,0,0,,What... were you gonna do...\Nafter showing me this?
+Dialogue: 0,0:08:47.33,0:08:51.09,Default,,0,0,0,,Can you help me brush the Titan's teeth?
+Dialogue: 0,0:08:51.09,0:08:54.76,Default,,0,0,0,,You don't get a chance\Nlike this every day.
+Dialogue: 0,0:08:58.60,0:08:59.39,Default,,0,0,0,,Huh?
+Dialogue: 0,0:08:59.39,0:09:06.19,Default,,0,0,0,,We've gotta go way up there to brush.\NLet's climb up and take a look.
+Dialogue: 0,0:09:06.19,0:09:09.61,Default,,0,0,0,,Sounds good, right?
+Dialogue: 0,0:09:09.61,0:09:11.15,Default,,0,0,0,,Right...
+Dialogue: 0,0:09:11.15,0:09:13.57,Default,,0,0,0,,Falco! Get away from him!
+Dialogue: 0,0:09:13.57,0:09:14.40,Default,,0,0,0,,Gabi?!
+Dialogue: 0,0:09:14.40,0:09:16.99,Default,,0,0,0,,He's gonna feed you to the Titan!
+Dialogue: 0,0:09:16.99,0:09:17.95,Default,,0,0,0,,Huh?!
+Dialogue: 0,0:09:17.95,0:09:19.70,Default,,0,0,0,,Conny! Stop!
+Dialogue: 0,0:09:19.70,0:09:22.95,Default,,0,0,0,,Stay back! Don't come near us!
+Dialogue: 0,0:09:25.29,0:09:26.42,Default,,0,0,0,,Conny!
+Dialogue: 0,0:09:26.42,0:09:32.05,Default,,0,0,0,,Shuddap! I don't wanna hear it!\NDon't talk! You wouldn't get it!
+Dialogue: 0,0:09:32.05,0:09:36.80,Default,,0,0,0,,You're just gonna say to give up\Non my mom and let him live!
+Dialogue: 0,0:09:36.80,0:09:41.64,Default,,0,0,0,,A know-it-all wouldn't\Nget how idiots work!
+Dialogue: 0,0:09:41.64,0:09:44.73,Default,,0,0,0,,Falco! Use the Jaw's power!
+Dialogue: 0,0:09:44.73,0:09:49.48,Default,,0,0,0,,The Jaw's power? Huh?\NWhat about Galliard?
+Dialogue: 0,0:09:51.32,0:09:55.36,Default,,0,0,0,,You can't...! Stop! Falco!
+Dialogue: 0,0:09:58.78,0:10:01.66,Default,,0,0,0,,Gabi, please forgive Conny.
+Dialogue: 0,0:10:01.66,0:10:03.12,Default,,0,0,0,,Huh?
+Dialogue: 0,0:10:09.96,0:10:12.92,Default,,0,0,0,,Hey! I said to stay back!
+Dialogue: 0,0:10:24.31,0:10:27.64,Default,,0,0,0,,Hey! What are you doing?!
+Dialogue: 0,0:10:28.98,0:10:31.06,Default,,0,0,0,,Say something, Armin!
+Dialogue: 0,0:10:31.06,0:10:34.65,Default,,0,0,0,,You told me not to talk!
+Dialogue: 0,0:10:34.65,0:10:38.99,Default,,0,0,0,,So... I'll let my actions talk.
+Dialogue: 0,0:11:02.47,0:11:04.39,Default,,0,0,0,,My brother...
+Dialogue: 0,0:11:05.47,0:11:09.85,Default,,0,0,0,,What was your plan if I hadn't saved you?
+Dialogue: 0,0:11:09.85,0:11:14.36,Default,,0,0,0,,To turn your mom back into a human.
+Dialogue: 0,0:11:14.36,0:11:17.99,Default,,0,0,0,,And inherit the Colossal Titan.
+Dialogue: 0,0:11:17.99,0:11:24.37,Default,,0,0,0,,If you thought for a second,\Nyou know that'd only make her suffer.
+Dialogue: 0,0:11:25.70,0:11:31.42,Default,,0,0,0,,When my mom sent me off,\Nshe said to be a splendid soldier.
+Dialogue: 0,0:11:31.42,0:11:37.76,Default,,0,0,0,,And yet, her son almost\Nkilled a kid and a friend.
+Dialogue: 0,0:11:37.76,0:11:42.63,Default,,0,0,0,,That's the kind of soldier I am.
+Dialogue: 0,0:11:43.68,0:11:49.06,Default,,0,0,0,,Me, too. I couldn't stack\Nup to the commander.
+Dialogue: 0,0:11:53.35,0:11:59.99,Default,,0,0,0,,Armin... I wanna be a soldier\Nmy mom could take pride in.
+Dialogue: 0,0:12:03.32,0:12:08.29,Default,,0,0,0,,So, let's go save people in trouble.
+Dialogue: 0,0:12:12.96,0:12:17.96,WallEyecatchI,,0,0,0,,{\an2}"Information Available for Public Disclosure"\N"Ragako Village"\N"A village that was deserted after being overrun by Titans. Upon their arrival, the Scouts discovered a single Titan with extremely small limbs which made it unable to move. Later, when Titans were being eradicated from the island, former Ragako resident Conny Springer\Nrequested for the village to become\Na 'Titan Observation Zone' and be left as-is."
+Dialogue: 0,0:12:18.80,0:12:20.59,Default,,0,0,0,,I found you.
+Dialogue: 0,0:12:20.59,0:12:22.59,Default,,0,0,0,,I'm glad.
+Dialogue: 0,0:12:23.68,0:12:30.52,Default,,0,0,0,,Did you come looking for me?\NOr... for this scarf?
+Dialogue: 0,0:12:30.52,0:12:32.98,Default,,0,0,0,,I knew you would have it.
+Dialogue: 0,0:12:32.98,0:12:39.02,Default,,0,0,0,,I'm sorry. I thought it'd\Nbring me closer to you.
+Dialogue: 0,0:12:41.36,0:12:46.78,Default,,0,0,0,,I have Thunder Spear shrapnel\Nin me that they can't remove.
+Dialogue: 0,0:12:46.78,0:12:55.04,Default,,0,0,0,,It's a pity I won't be able to see the\Nfree world that Eren Jaeger creates.
+Dialogue: 0,0:12:56.88,0:13:04.09,Default,,0,0,0,,It wasn't much, but I had the chance\Nto speak with him... about you.
+Dialogue: 0,0:13:05.13,0:13:09.97,Default,,0,0,0,,He talked about wanting\Nto throw the scarf out.
+Dialogue: 0,0:13:12.02,0:13:16.85,Default,,0,0,0,,So, rather than throw it out,\NI thought I'd just...
+Dialogue: 0,0:13:16.85,0:13:18.48,Default,,0,0,0,,Give it back.
+Dialogue: 0,0:13:23.49,0:13:28.03,Default,,0,0,0,,I became a soldier because I admired you.
+Dialogue: 0,0:13:30.37,0:13:34.04,Default,,0,0,0,,I have no regrets.
+Dialogue: 0,0:13:35.25,0:13:42.34,Default,,0,0,0,,Because I gave my heart and my life\Nfollowing in your footsteps.
+Dialogue: 0,0:13:47.68,0:13:51.10,Default,,0,0,0,,Is that the last of the rumbling Titans?
+Dialogue: 0,0:13:51.10,0:13:55.64,Default,,0,0,0,,Finally, an end to all this noise.
+Dialogue: 0,0:13:55.64,0:14:00.65,Default,,0,0,0,,To me, it sounds like\Nthe bells of freedom.
+Dialogue: 0,0:14:02.65,0:14:10.12,Default,,0,0,0,,Our Eldian Empire has endured the\Nworld's persecution for 100 years!
+Dialogue: 0,0:14:10.12,0:14:14.95,Default,,0,0,0,,That ends now! Now, we are free!
+Dialogue: 0,0:14:14.95,0:14:21.29,Default,,0,0,0,,Our liberator, Eren, and we Jaegerists\Nhave triumphed over the world!
+Dialogue: 0,0:14:23.42,0:14:29.93,Default,,0,0,0,,Say, Mikasa. Will you join the\NJaegerists and rule as one of 'em?
+Dialogue: 0,0:14:29.93,0:14:31.30,Default,,0,0,0,,Not interested.
+Dialogue: 0,0:14:31.30,0:14:34.06,Default,,0,0,0,,Looks like Jean made up his mind.
+Dialogue: 0,0:14:34.06,0:14:35.93,Default,,0,0,0,,Give your hearts!
+Dialogue: 0,0:14:35.93,0:14:37.77,Default,,0,0,0,,--Give your hearts!\N--Give your hearts!
+Dialogue: 0,0:14:37.77,0:14:39.35,Default,,0,0,0,,Give your hearts!
+Dialogue: 0,0:14:39.35,0:14:41.15,Default,,0,0,0,,--Give your hearts!\N--Give your hearts!
+Dialogue: 0,0:14:41.15,0:14:43.07,Default,,0,0,0,,Give your hearts!
+Dialogue: 0,0:14:43.07,0:14:45.53,Default,,0,0,0,,--Give your hearts!\N--Give your hearts!
+Dialogue: 0,0:14:45.53,0:14:47.57,Default,,0,0,0,,Long live the Jaegerists!
+Dialogue: 0,0:14:47.57,0:14:49.57,Default,,0,0,0,,Give your hearts!
+Dialogue: 0,0:14:49.57,0:14:52.66,Default,,0,0,0,,This one's for Eren!
+Dialogue: 0,0:14:52.66,0:14:55.74,Default,,0,0,0,,We should hurry and see Reiner.
+Dialogue: 0,0:14:55.74,0:14:59.29,Default,,0,0,0,,It's okay, he'll be out for days.
+Dialogue: 0,0:14:59.29,0:15:01.88,Default,,0,0,0,,Is this detour a good idea?
+Dialogue: 0,0:15:01.88,0:15:04.55,Default,,0,0,0,,We've gotta fill our stomachs.
+Dialogue: 0,0:15:05.59,0:15:08.09,Default,,0,0,0,,You think it's true, Armin?
+Dialogue: 0,0:15:08.09,0:15:14.64,Default,,0,0,0,,Mmm. If all hardening has come\Nundone, it's likely that Annie has--
+Dialogue: 0,0:15:16.43,0:15:18.60,Default,,0,0,0,,A-Annie?!
+Dialogue: 0,0:15:18.60,0:15:21.23,Default,,0,0,0,,--Huh?\N--Eh?
+Dialogue: 0,0:15:25.86,0:15:26.90,Default,,0,0,0,,Huh?
+Dialogue: 0,0:15:26.90,0:15:30.65,Default,,0,0,0,,Annie's stuffing her face with pie!
+Dialogue: 0,0:15:32.11,0:15:33.99,Default,,0,0,0,,Cut it out, Conny.
+Dialogue: 0,0:15:33.99,0:15:35.74,Default,,0,0,0,,She eats like a pig!
+Dialogue: 0,0:15:35.74,0:15:38.70,Default,,0,0,0,,It's her first pie in years!
+Dialogue: 0,0:15:38.70,0:15:42.50,Default,,0,0,0,,Sorry! The line took forever and--
+Dialogue: 0,0:15:42.50,0:15:44.84,Default,,0,0,0,,She's gone.
+Dialogue: 0,0:15:46.05,0:15:53.55,Default,,0,0,0,,"Dear Hitch. I ran into Armin and Conny\Nand decided to join them.
+Dialogue: 0,0:15:53.55,0:15:57.89,Default,,0,0,0,,I'm going ahead. Sorry for the trouble.
+Dialogue: 0,0:15:57.89,0:16:03.69,Default,,0,0,0,,Thanks for talking to me these\Npast four years. Goodbye.
+Dialogue: 0,0:16:03.69,0:16:06.52,Default,,0,0,0,,Your gloomy roommate."
+Dialogue: 0,0:16:14.53,0:16:19.79,Default,,0,0,0,,Good grief. I can't finish this alone.
+Dialogue: 0,0:16:19.79,0:16:24.42,Default,,0,0,0,,Comrades of the Empire,\Nthank you for gathering!
+Dialogue: 0,0:16:24.42,0:16:31.01,Default,,0,0,0,,We will now execute two Volunteers\Nwho opposed the Eldian Empire!
+Dialogue: 0,0:16:31.01,0:16:37.76,Default,,0,0,0,,With this, we shall carry on Eren's\Nwill to dominate the world...
+Dialogue: 0,0:16:37.76,0:16:42.39,Default,,0,0,0,,...by declaring our reign\Nover Paradis Island!
+Dialogue: 0,0:16:45.44,0:16:48.02,Default,,0,0,0,,This criminal is Yelena!
+Dialogue: 0,0:16:48.02,0:16:53.90,Default,,0,0,0,,The real reason she rebelled from Marley\Nand supported the Eldian Empire
+Dialogue: 0,0:16:53.90,0:16:58.28,Default,,0,0,0,,was so Zeke could obtain\Nthe Founding Titan's power
+Dialogue: 0,0:16:58.28,0:17:02.58,Default,,0,0,0,,and wipe out Eldians with\Ntheir euthanization plan!
+Dialogue: 0,0:17:02.58,0:17:05.87,Default,,0,0,0,,--In the end, she's a filthy Marleyan!\N--Yeah!
+Dialogue: 0,0:17:05.87,0:17:10.71,Default,,0,0,0,,Eren managed to beat\NZeke and halt the plan,
+Dialogue: 0,0:17:10.71,0:17:14.51,Default,,0,0,0,,but this criminal served\Nas Zeke's loyal pawn!
+Dialogue: 0,0:17:14.51,0:17:15.72,Default,,0,0,0,,You whore!
+Dialogue: 0,0:17:15.72,0:17:18.26,Default,,0,0,0,,Send her to hell!
+Dialogue: 0,0:17:18.26,0:17:22.14,Default,,0,0,0,,Yelena... Have any last words?
+Dialogue: 0,0:17:22.14,0:17:24.10,Default,,0,0,0,,Aren't you gonna shoot?
+Dialogue: 0,0:17:24.10,0:17:25.48,Default,,0,0,0,,Die, mainlander!
+Dialogue: 0,0:17:25.48,0:17:27.56,Default,,0,0,0,,The Subjects of Ymir will prevail!
+Dialogue: 0,0:17:27.56,0:17:30.61,Default,,0,0,0,,Ymir's bloodline will last forever!
+Dialogue: 0,0:17:30.61,0:17:34.86,Default,,0,0,0,,Shoot her! Shoot her!\NShoot her! Shoot her...!
+Dialogue: 0,0:17:37.16,0:17:39.12,Default,,0,0,0,,Not yet!
+Dialogue: 0,0:17:43.58,0:17:46.08,Default,,0,0,0,,This criminal is Onyankopon.
+Dialogue: 0,0:17:46.08,0:17:52.76,Default,,0,0,0,,He aided Eldia without knowing of\Nthe euthanization plan, however...!
+Dialogue: 0,0:17:52.76,0:17:57.76,Default,,0,0,0,,He said he'd rather die than\Nlive under the Eldian Empire!
+Dialogue: 0,0:17:57.76,0:18:00.72,Default,,0,0,0,,It's not too late to change your mind--
+Dialogue: 0,0:18:03.14,0:18:10.61,Default,,0,0,0,,I aided Eldia to save my homeland from\NMarley, but I was helping you, too!
+Dialogue: 0,0:18:10.61,0:18:13.78,Default,,0,0,0,,And what did that get me?
+Dialogue: 0,0:18:13.78,0:18:19.70,Default,,0,0,0,,My homeland will be crushed\Nand my family massacred!
+Dialogue: 0,0:18:19.70,0:18:24.75,Default,,0,0,0,,And the only ones left will\Nbe you xenophobic shits?
+Dialogue: 0,0:18:26.54,0:18:30.38,Default,,0,0,0,,Sucking up to you guys\Nfor life isn't worth it!
+Dialogue: 0,0:18:30.38,0:18:35.84,Default,,0,0,0,,Even you should know how\Ninsane indiscriminate killing is!
+Dialogue: 0,0:18:35.84,0:18:40.14,Default,,0,0,0,,Why don't any of you understand?!
+Dialogue: 0,0:18:40.14,0:18:43.43,Default,,0,0,0,,Don't just stand there!\NSay something, Jean!
+Dialogue: 0,0:18:57.74,0:19:01.99,Default,,0,0,0,,Huh? Hey!
+Dialogue: 0,0:19:01.99,0:19:04.79,Default,,0,0,0,,Whoops. I missed.
+Dialogue: 0,0:19:04.79,0:19:08.37,Default,,0,0,0,,Hey, what's the big idea?
+Dialogue: 0,0:19:11.42,0:19:13.29,Default,,0,0,0,,Floch!
+Dialogue: 0,0:19:22.05,0:19:23.43,Default,,0,0,0,,It's the Cart Titan!
+Dialogue: 0,0:19:23.43,0:19:26.06,Default,,0,0,0,,--They got away!\N--Jean got eaten!\N--And Yelena!
+Dialogue: 0,0:19:26.06,0:19:29.02,Default,,0,0,0,,Shit! Where's Mikasa?!
+Dialogue: 0,0:19:29.02,0:19:31.56,Default,,0,0,0,,Have her... go after...!
+Dialogue: 0,0:19:33.06,0:19:37.28,Default,,0,0,0,,Where... is Mikasa?
+Dialogue: 0,0:19:37.28,0:19:38.86,Default,,0,0,0,,Hear that?
+Dialogue: 0,0:19:38.86,0:19:44.37,Default,,0,0,0,,Four gunshots in a row--\NJean's signal to continue the plan.
+Dialogue: 0,0:19:44.37,0:19:47.24,Default,,0,0,0,,We've got enough weapons and food!
+Dialogue: 0,0:19:47.24,0:19:52.04,Default,,0,0,0,,All their eyes will be on the\Nother side of the fort. Let's go!
+Dialogue: 0,0:20:02.84,0:20:04.93,Default,,0,0,0,,Someone's watching us!
+Dialogue: 0,0:20:07.31,0:20:09.02,Default,,0,0,0,,What now, Armin?
+Dialogue: 0,0:20:09.02,0:20:12.65,Default,,0,0,0,,Gotta keep going! Hurry, Mikasa!
+Dialogue: 0,0:20:24.03,0:20:27.87,Default,,0,0,0,,I ain't ever going in a\NTitan's mouth again!
+Dialogue: 0,0:20:27.87,0:20:33.92,Default,,0,0,0,,The Cart can stay a Titan for months,\Nright? Don't you brush your teeth?
+Dialogue: 0,0:20:33.92,0:20:37.54,Default,,0,0,0,,That's a rude thing to ask a lady.
+Dialogue: 0,0:20:37.54,0:20:40.59,Default,,0,0,0,,When did you partner with Marley?
+Dialogue: 0,0:20:40.59,0:20:42.34,Default,,0,0,0,,Last night.
+Dialogue: 0,0:20:42.34,0:20:49.77,Default,,0,0,0,,Why? If you stayed a Jaegerist,\Nyou'd have everything you wanted.
+Dialogue: 0,0:20:51.68,0:20:57.69,Default,,0,0,0,,I wish I could've plugged my ears\Nand stayed cooped up in that room.
+Dialogue: 0,0:20:57.69,0:21:04.32,Default,,0,0,0,,But then, those ashy bones\Nwould never forgive me.
+Dialogue: 0,0:21:04.32,0:21:11.04,Default,,0,0,0,,Jean... I don't quite follow, but thanks.
+Dialogue: 0,0:21:11.04,0:21:13.83,Default,,0,0,0,,Just wash off already.
+Dialogue: 0,0:21:14.83,0:21:17.75,Default,,0,0,0,,Why... me?
+Dialogue: 0,0:21:17.75,0:21:23.80,Default,,0,0,0,,Securing you was part of the deal\Nfor us to borrow the Cart's power.
+Dialogue: 0,0:21:23.80,0:21:27.05,Default,,0,0,0,,They wanted you alive.
+Dialogue: 0,0:21:34.56,0:21:36.15,Default,,0,0,0,,Get up.
+Dialogue: 0,0:21:42.36,0:21:43.90,Default,,0,0,0,,Annie!
+Dialogue: 0,0:21:46.57,0:21:48.37,Default,,0,0,0,,Calm down, Reiner!
+Dialogue: 0,0:21:48.37,0:21:52.54,Default,,0,0,0,,Don't worry! They're our allies!
+Dialogue: 0,0:21:52.54,0:21:56.75,Default,,0,0,0,,There's not much time. Let's go.
+Dialogue: 0,0:21:56.75,0:21:58.58,Default,,0,0,0,,Where to?
+Dialogue: 0,0:22:02.55,0:22:05.22,Default,,0,0,0,,To save the world.
+Dialogue: 0,0:23:40.94,0:23:44.32,Default,,0,0,0,,Enemies are made in the chaos of war.
+Dialogue: 0,0:23:44.32,0:23:48.69,Default,,0,0,0,,We hated, loathed, and killed one another.
+Dialogue: 0,0:23:48.69,0:23:52.41,Default,,0,0,0,,What lies beyond the campfire?
+Dialogue: 0,0:23:51.99,0:23:56.42,Default,,0,0,0,,Next episode: "Night of the End."
+Dialogue: 0,0:23:52.99,0:23:56.49,On Top,,0,0,0,,"Night of the End"
+Dialogue: 0,0:23:56.42,0:23:58.41,Default,,0,0,0,,
+Dialogue: 0,0:23:58.41,0:24:00.43,Default,,0,0,0,,
+Dialogue: 0,0:24:00.43,0:24:02.42,Default,,0,0,0,,
+

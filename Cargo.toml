@@ -1,0 +1,12 @@
+[package]
+name = "subass"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+chrono = "0.4.31"
+strum = { version = "0.25.0", features = ["derive"] }
+
+[dev-dependencies]
+rstest = "*"
