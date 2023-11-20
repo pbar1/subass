@@ -85,13 +85,20 @@ impl AssScript {
 
 fn main() -> anyhow::Result<()> {
     let file_bot = "example.en.ass";
-    let file_top = "example.zh-TW.ass";
+    // let file_top = "example.zh-TW.ass";
 
     let script_bot = AssScript::try_from_file(file_bot)?;
-    dbg!(script_bot);
+    // TODO: Print format line
+    for x in script_bot.styles.entries {
+        println!("{}", script_bot.styles.context.line_from_style_strict(&x)?);
+    }
+    // TODO: Print format line
+    for x in script_bot.events.entries {
+        println!("{}", script_bot.events.context.line_from_event_strict(&x)?);
+    }
 
-    let script_top = AssScript::try_from_file(file_top)?;
-    dbg!(script_top);
+    // let script_top = AssScript::try_from_file(file_top)?;
+    // dbg!(script_top);
 
     Ok(())
 }
